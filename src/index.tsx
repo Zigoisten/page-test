@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './pages/App';
-import Homero from './pages/Homero';
-import Szamologep from './pages/Szamologep';
-import ErrorPage from './pages/404';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -13,13 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Homero/>}/>
-      <Route path='/szamologep' element={<Szamologep/>}/>
-      <Route path='*' element={<ErrorPage/>}/>
-    </Routes>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
 
